@@ -4,7 +4,7 @@ import styles from './../Styles.module.css';
 
 type UpdateRouteProps = {
     oldTitle: string;
-    callBack: () => void;
+    callBack: (newDate: string) => void;
 };
 
 export const UpdateItem = ({ oldTitle, callBack }: UpdateRouteProps) => {
@@ -12,7 +12,7 @@ export const UpdateItem = ({ oldTitle, callBack }: UpdateRouteProps) => {
     const [newTitle, setNewTitle] = useState(oldTitle);
 
     const editHandler = () => {
-        callBack()
+        callBack(newTitle)
         setEdit(false);
           };
 

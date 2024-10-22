@@ -96,6 +96,7 @@ function App() {
         setFlightTables(flightTables.map(ft =>
             ft.flightTableID === flightTableID ? {...ft, date: newDate} : ft
         ));
+
     };
 
     const updateFTRoutesFrom = (flightTableID: string, routeID: string, newFrom: string) => {
